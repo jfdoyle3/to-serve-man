@@ -1,4 +1,6 @@
 # to-serve-man
 
-Java springboot backen with mySQL and MongoDB
+Java SpringBoot backend with mySQL and MongoDB
 with React Front end.
+
+
