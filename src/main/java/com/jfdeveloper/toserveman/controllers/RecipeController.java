@@ -3,7 +3,7 @@ package com.jfdeveloper.toserveman.controllers;
 
 import com.jfdeveloper.toserveman.entities.Recipe;
 import com.jfdeveloper.toserveman.repositories.RecipeRepository;
-import org.jetbrains.annotations.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,7 +47,7 @@ public class RecipeController {
 
     @PutMapping("/recipes/{id}")
     @ResponseBody
-    public Recipe updateRecipe(@PathVariable String id, @RequestBody @NotNull Recipe updates) {
+    public Recipe updateRecipe(@PathVariable String id, @RequestBody Recipe updates) {
         Recipe location = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         if (updates.getTitle() != null) location.setTitle(updates.getTitle());
         if (updates.getIngredients() != null) location.setIngredients(updates.getIngredients());
