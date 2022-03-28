@@ -1,5 +1,4 @@
 # to-serve-man
 
-Java springboot backen with mySQL
+Java springboot backen with mySQL and MongoDB
 with React Front end.
-Will attempt to make a Flutter front end too.
