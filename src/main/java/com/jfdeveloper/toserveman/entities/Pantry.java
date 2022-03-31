@@ -1,21 +1,22 @@
-package com.jfdeveloper.toserveman.controllers;
+package com.jfdeveloper.toserveman.entities;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Pantry {
 
     @Id
+    @GeneratedValue
     private Long id;
     private String item;
     private int quantity;
 
     public Pantry() {}
 
-    public Pantry(Long id, String item, int quantity) {
-        this.id = id;
+    public Pantry( String item, int quantity) {
         this.item = item;
         this.quantity = quantity;
     }

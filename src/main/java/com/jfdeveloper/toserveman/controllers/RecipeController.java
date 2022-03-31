@@ -24,7 +24,7 @@ public class RecipeController {
     @GetMapping("/recipes")
     public ResponseEntity<List<Recipe>> getAllRecipes(@RequestParam String title) {
         try {
-            List<Recipe> recipes = new ArrayList<Recipe>();
+            List<Recipe> recipes = new ArrayList<>();
             if (title == null)
                 recipes.addAll(repository.findAll());
             else
