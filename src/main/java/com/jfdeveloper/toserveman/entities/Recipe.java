@@ -3,7 +3,9 @@ package com.jfdeveloper.toserveman.entities;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="recipes")
+import javax.persistence.Entity;
+
+@Entity
 public class Recipe {
 
     @Id
